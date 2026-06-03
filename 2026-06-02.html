@@ -1,0 +1,58 @@
+<!-- https://cssbattle.dev/play/XAXJBHGV3mP8N0KCu47a -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="background">
+			<div class="circle outer">
+				<div class="circle inner"></div>
+			</div>
+		</div>
+		<style>
+			* {
+				margin: 0;
+			}
+			body {
+				width: 100%;
+				height: 100vh;
+			}
+			.background {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				justify-content: center;
+				align-items: center;
+				background: #668884;
+			}
+			.circle {
+				aspect-ratio: 1 / 1;
+				border-radius: 50%;
+			}
+			.circle.outer {
+				position: relative;
+				width: 240px;
+				background-color: #eed9d9;
+			}
+			.circle.outer::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 70px;
+				bottom: 50px;
+				background-color: #668884;
+			}
+			.circle.inner {
+				position: absolute;
+				width: 140px;
+				top: 50%;
+				left: 50%;
+				background-color: #668884;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+	</body>
+</html>
