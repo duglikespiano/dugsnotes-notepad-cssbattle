@@ -1,0 +1,55 @@
+<!-- https://cssbattle.dev/play/17Bc6kIuAsiQgqP65moB -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+		}
+		body {
+			height: 100vh;
+		}
+		.container {
+			display: grid;
+			grid-template-columns: repeat(4, 70px);
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			background-color: #d5ca5b;
+		}
+		.box {
+			position: relative;
+			aspect-ratio: 1 / 1;
+			background: #2f5a76;
+		}
+		.box::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			left: 50%;
+			aspect-ratio: 1 / 1;
+			background-color: #2f5a76;
+			transform: translateX(-50%);
+		}
+		.box:nth-child(odd)::before {
+			top: -40px;
+		}
+		.box:nth-child(even)::before {
+			bottom: -40px;
+		}
+	</style>
+</html>
