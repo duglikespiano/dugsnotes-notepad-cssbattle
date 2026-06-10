@@ -1,0 +1,70 @@
+<!-- https://cssbattle.dev/play/NQ2Ai87FxvvPrXme8fHQ -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="ring outer">
+				<div class="ring mid">
+					<div class="ring core"></div>
+				</div>
+				<div class="mouth"></div>
+			</div>
+		</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+		}
+		body {
+			width: 100%;
+			height: 100vh;
+		}
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			background: #ebf6f0;
+		}
+		.ring {
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+		}
+		.outer {
+			position: relative;
+			width: 200px;
+			background-color: #4a9a86;
+		}
+		.mid {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 140px;
+			background-color: #4c4c6b;
+			transform: translate(-50%, -50%);
+		}
+		.core {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 80px;
+			background-color: #ebf6f0;
+			transform: translate(-50%, -50%);
+		}
+		.mouth {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 100px;
+			height: 100px;
+			background-color: #ebf6f0;
+			transform: translateX(-50%) translateY(20.75%) rotate(45deg);
+		}
+	</style>
+</html>
