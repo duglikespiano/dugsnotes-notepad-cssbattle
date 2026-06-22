@@ -1,0 +1,60 @@
+<!-- https://cssbattle.dev/play/g7g7LD4T5HXt9Pru8Yvq -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="boxes">
+				<div class="box right"></div>
+				<div class="box center"></div>
+				<div class="box left"></div>
+			</div>
+		</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			background: #f3ac3c;
+		}
+		.boxes {
+			position: relative;
+			width: 180px;
+			height: 180px;
+			background-color: #000000;
+		}
+		.box {
+			position: absolute;
+			background-color: #f3ac3c;
+		}
+		.right {
+			width: 100px;
+			height: 100px;
+			top: 0;
+			right: 0;
+		}
+		.center {
+			width: 78px;
+			height: 78px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.left {
+			width: 50px;
+			height: 50px;
+			bottom: 0;
+			left: 0;
+		}
+	</style>
+</html>
