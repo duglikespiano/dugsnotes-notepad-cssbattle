@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="squares">
+				<div class="square left top"></div>
+				<div class="square right top"></div>
+				<div class="square left bottom"></div>
+				<div class="square right bottom"></div>
+				<div class="square center"></div>
+			</div>
+		</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			background: #ffffff;
+		}
+		.squares {
+			position: relative;
+			display: grid;
+			width: 180px;
+			aspect-ratio: 1 / 1;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 30px;
+		}
+		.square {
+			position: relative;
+			background-color: #ec1d25;
+		}
+		.square::before {
+			content: '';
+			position: absolute;
+			width: 45px;
+			aspect-ratio: 1 / 1;
+			background-color: #ffffff;
+			z-index: 1;
+		}
+		.left::before {
+			right: 0;
+		}
+		.top::before {
+			bottom: 0;
+		}
+		.right::before {
+			left: 0;
+		}
+		.bottom::before {
+			top: 0;
+		}
+		.square.center {
+			position: absolute;
+			width: 60px;
+			aspect-ratio: 1 / 1;
+			background-color: #004b8e;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 10;
+		}
+		.square.center::before {
+			content: none;
+		}
+	</style>
+</html>
