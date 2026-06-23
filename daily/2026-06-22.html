@@ -1,0 +1,60 @@
+<!-- https://cssbattle.dev/play/mdSEofDNaGSNTWgGc2Gt -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="elements">
+				<div class="rounded-square"></div>
+				<div class="no-rounded-square"></div>
+				<div class="circles">
+					<div class="circle"></div>
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			background: #38506f;
+		}
+		.elements {
+			width: 160px;
+		}
+		.rounded-square {
+			height: 120px;
+			background-color: #f0cd48;
+			background-color: #f0cd48;
+			border-radius: 20px;
+		}
+		.no-rounded-square {
+			height: 20px;
+			background-color: #f0cd48;
+			margin-top: 10px;
+		}
+		.circles {
+			display: flex;
+			gap: 40px;
+			justify-content: center;
+			margin-top: 10px;
+		}
+		.circle {
+			width: 30px;
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+			background-color: #f0cd48;
+		}
+	</style>
+</html>
