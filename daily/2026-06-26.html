@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="squares">
+				<div class="square small left"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square small right"></div>
+			</div>
+		</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			background: #d8f581;
+		}
+		.squares {
+			display: grid;
+			width: 220px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			aspect-ratio: 1 / 1;
+		}
+		.square {
+			background-color: #222222;
+		}
+		.square.small {
+			width: 55px;
+			aspect-ratio: 1 / 1;
+		}
+		.square.small.right {
+			margin-left: auto;
+			margin-top: auto;
+		}
+	</style>
+</html>
